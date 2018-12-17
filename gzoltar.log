@@ -1,0 +1,499 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] GZoltar
+[INFO] GZoltar :: Core
+[INFO] GZoltar :: FL
+[INFO] GZoltar :: Report
+[INFO] GZoltar :: Agent RT
+[INFO] GZoltar :: Agent
+[INFO] GZoltar :: Maven Plugin
+[INFO] GZoltar :: Ant Plugin
+[INFO] GZoltar :: Command Line Interface
+[INFO] GZoltar :: Documentation
+[INFO] GZoltar :: Test
+[INFO] GZoltar :: Distribution
+[INFO] root
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building GZoltar 1.7.2-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ com.gzoltar.build ---
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ com.gzoltar.build ---
+[INFO] Installing /home/lizijie/research/new_work/test/gzoltar/com.gzoltar.build/pom.xml to /home/lizijie/.m2/repository/com/gzoltar/com.gzoltar.build/1.7.2-SNAPSHOT/com.gzoltar.build-1.7.2-SNAPSHOT.pom
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building GZoltar :: Core 1.7.2-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ com.gzoltar.core ---
+[INFO] Deleting /home/lizijie/research/new_work/test/gzoltar/com.gzoltar.core/target
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.6:run (check-license-header) @ com.gzoltar.core ---
+[INFO] Executing tasks
+
+main:
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ com.gzoltar.core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/lizijie/research/new_work/test/gzoltar/com.gzoltar.core/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.2:compile (default-compile) @ com.gzoltar.core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 109 source files to /home/lizijie/research/new_work/test/gzoltar/com.gzoltar.core/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ com.gzoltar.core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/lizijie/research/new_work/test/gzoltar/com.gzoltar.core/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.2:testCompile (default-testCompile) @ com.gzoltar.core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 31 source files to /home/lizijie/research/new_work/test/gzoltar/com.gzoltar.core/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.17:test (default-test) @ com.gzoltar.core ---
+[INFO] Surefire report directory: /home/lizijie/research/new_work/test/gzoltar/com.gzoltar.core/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running TestSuite
+Configuring TestNG with: TestNG652Configurator
+[TestNG] [ERROR] No test suite found. Nothing to run
+Usage: <main class> [options] The XML suite files to run
+  Options:
+    -configfailurepolicy
+      Configuration failure policy (skip or continue)
+    -d
+      Output directory
+    -dataproviderthreadcount
+      Number of threads to use when running data providers
+    -excludegroups
+      Comma-separated list of group names to  exclude
+    -groups
+      Comma-separated list of group names to be run
+    -junit
+      JUnit mode
+      Default: false
+    -listener
+      List of .class files or list of class names implementing ITestListener 
+      or ISuiteListener
+    -methods
+      Comma separated of test methods
+      Default: []
+    -methodselectors
+      List of .class files or list of class names implementing IMethodSelector
+    -mixed
+      Mixed mode - autodetect the type of current test and run it with 
+      appropriate runner
+      Default: false
+    -objectfactory
+      List of .class files or list of class names implementing 
+      ITestRunnerFactory 
+    -parallel
+      Parallel mode (methods, tests or classes)
+      Possible Values: [tests, methods, classes, instances, none, true, false]
+    -port
+      The port
+    -reporter
+      Extended configuration for custom report listener
+    -suitename
+      Default name of test suite, if not specified in suite definition file or 
+      source code
+    -suitethreadpoolsize
+      Size of the thread pool to use to run suites
+      Default: 1
+    -testclass
+      The list of test classes
+    -testjar
+      A jar file containing the tests
+    -testname
+      Default name of test, if not specified in suitedefinition file or source 
+      code 
+    -testnames
+      The list of test names to run
+    -testrunfactory, -testRunFactory
+      The factory used to create tests
+    -threadcount
+      Number of threads to use when running tests in parallel
+    -usedefaultlisteners
+      Whether to use the default listeners
+      Default: true
+    -log, -verbose
+      Level of verbosity
+    -xmlpathinjar
+      The full path to the xml file inside the jar file (only valid if 
+      -testjar was specified)
+      Default: testng.xml
+
+Configuring TestNG with: TestNG652Configurator
+Tests run: 94, Failures: 11, Errors: 0, Skipped: 0, Time elapsed: 0.989 sec <<< FAILURE! - in TestSuite
+testProbesOfAnonymousClass on testProbesOfAnonymousClass(com.gzoltar.core.instr.pass.TestLineInstrumentation)(com.gzoltar.core.instr.pass.TestLineInstrumentation)  Time elapsed: 0.067 sec  <<< FAILURE!
+javassist.CannotCompileException: [source error] no such class: java.lang.UnknownError$$gzoltarAccess
+	at javassist.compiler.MemberResolver.searchImports(MemberResolver.java:479)
+	at javassist.compiler.MemberResolver.lookupClass(MemberResolver.java:422)
+	at javassist.compiler.MemberResolver.lookupClassByJvmName(MemberResolver.java:329)
+	at javassist.compiler.TypeChecker.atCallExpr(TypeChecker.java:711)
+	at javassist.compiler.JvstTypeChecker.atCallExpr(JvstTypeChecker.java:170)
+	at javassist.compiler.ast.CallExpr.accept(CallExpr.java:49)
+	at javassist.compiler.CodeGen.doTypeCheck(CodeGen.java:266)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:360)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:53)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:381)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:53)
+	at javassist.compiler.CodeGen.atIfStmnt(CodeGen.java:428)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:385)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:53)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:381)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:53)
+	at javassist.compiler.CodeGen.atMethodBody(CodeGen.java:321)
+	at javassist.compiler.CodeGen.atMethodDecl(CodeGen.java:303)
+	at javassist.compiler.ast.MethodDecl.accept(MethodDecl.java:47)
+	at javassist.compiler.Javac.compileMethod(Javac.java:175)
+	at javassist.compiler.Javac.compile(Javac.java:102)
+	at javassist.CtNewMethod.make(CtNewMethod.java:79)
+	at javassist.CtNewMethod.make(CtNewMethod.java:50)
+	at javassist.CtMethod.make(CtMethod.java:140)
+	at com.gzoltar.core.instr.pass.AbstractInitMethodInstrumentationPass.transform(AbstractInitMethodInstrumentationPass.java:56)
+	at com.gzoltar.core.instr.pass.InstrumentationPass.transform(InstrumentationPass.java:124)
+	at com.gzoltar.core.instr.pass.TestLineInstrumentation.test(TestLineInstrumentation.java:60)
+	at com.gzoltar.core.instr.pass.TestLineInstrumentation.testProbesOfAnonymousClass(TestLineInstrumentation.java:130)
+
+testProbesOfPublicStaticClass on testProbesOfPublicStaticClass(com.gzoltar.core.instr.pass.TestLineInstrumentation)(com.gzoltar.core.instr.pass.TestLineInstrumentation)  Time elapsed: 0.008 sec  <<< FAILURE!
+javassist.CannotCompileException: [source error] no such class: java.lang.UnknownError$$gzoltarAccess
+	at javassist.compiler.MemberResolver.lookupClass(MemberResolver.java:410)
+	at javassist.compiler.MemberResolver.lookupClassByJvmName(MemberResolver.java:329)
+	at javassist.compiler.TypeChecker.atCallExpr(TypeChecker.java:711)
+	at javassist.compiler.JvstTypeChecker.atCallExpr(JvstTypeChecker.java:170)
+	at javassist.compiler.ast.CallExpr.accept(CallExpr.java:49)
+	at javassist.compiler.CodeGen.doTypeCheck(CodeGen.java:266)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:360)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:53)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:381)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:53)
+	at javassist.compiler.CodeGen.atIfStmnt(CodeGen.java:428)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:385)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:53)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:381)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:53)
+	at javassist.compiler.CodeGen.atMethodBody(CodeGen.java:321)
+	at javassist.compiler.CodeGen.atMethodDecl(CodeGen.java:303)
+	at javassist.compiler.ast.MethodDecl.accept(MethodDecl.java:47)
+	at javassist.compiler.Javac.compileMethod(Javac.java:175)
+	at javassist.compiler.Javac.compile(Javac.java:102)
+	at javassist.CtNewMethod.make(CtNewMethod.java:79)
+	at javassist.CtNewMethod.make(CtNewMethod.java:50)
+	at javassist.CtMethod.make(CtMethod.java:140)
+	at com.gzoltar.core.instr.pass.AbstractInitMethodInstrumentationPass.transform(AbstractInitMethodInstrumentationPass.java:56)
+	at com.gzoltar.core.instr.pass.InstrumentationPass.transform(InstrumentationPass.java:124)
+	at com.gzoltar.core.instr.pass.TestLineInstrumentation.test(TestLineInstrumentation.java:60)
+	at com.gzoltar.core.instr.pass.TestLineInstrumentation.testProbesOfPublicStaticClass(TestLineInstrumentation.java:227)
+
+testProbesOfAbstractClass on testProbesOfAbstractClass(com.gzoltar.core.instr.pass.TestLineInstrumentation)(com.gzoltar.core.instr.pass.TestLineInstrumentation)  Time elapsed: 0.004 sec  <<< FAILURE!
+javassist.CannotCompileException: [source error] no such class: java.lang.UnknownError$$gzoltarAccess
+	at javassist.compiler.MemberResolver.lookupClass(MemberResolver.java:410)
+	at javassist.compiler.MemberResolver.lookupClassByJvmName(MemberResolver.java:329)
+	at javassist.compiler.TypeChecker.atCallExpr(TypeChecker.java:711)
+	at javassist.compiler.JvstTypeChecker.atCallExpr(JvstTypeChecker.java:170)
+	at javassist.compiler.ast.CallExpr.accept(CallExpr.java:49)
+	at javassist.compiler.CodeGen.doTypeCheck(CodeGen.java:266)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:360)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:53)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:381)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:53)
+	at javassist.compiler.CodeGen.atIfStmnt(CodeGen.java:428)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:385)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:53)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:381)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:53)
+	at javassist.compiler.CodeGen.atMethodBody(CodeGen.java:321)
+	at javassist.compiler.CodeGen.atMethodDecl(CodeGen.java:303)
+	at javassist.compiler.ast.MethodDecl.accept(MethodDecl.java:47)
+	at javassist.compiler.Javac.compileMethod(Javac.java:175)
+	at javassist.compiler.Javac.compile(Javac.java:102)
+	at javassist.CtNewMethod.make(CtNewMethod.java:79)
+	at javassist.CtNewMethod.make(CtNewMethod.java:50)
+	at javassist.CtMethod.make(CtMethod.java:140)
+	at com.gzoltar.core.instr.pass.AbstractInitMethodInstrumentationPass.transform(AbstractInitMethodInstrumentationPass.java:56)
+	at com.gzoltar.core.instr.pass.InstrumentationPass.transform(InstrumentationPass.java:124)
+	at com.gzoltar.core.instr.pass.TestLineInstrumentation.test(TestLineInstrumentation.java:60)
+	at com.gzoltar.core.instr.pass.TestLineInstrumentation.testProbesOfAbstractClass(TestLineInstrumentation.java:110)
+
+testProbesOfProtectedClass on testProbesOfProtectedClass(com.gzoltar.core.instr.pass.TestLineInstrumentation)(com.gzoltar.core.instr.pass.TestLineInstrumentation)  Time elapsed: 0.003 sec  <<< FAILURE!
+javassist.CannotCompileException: [source error] no such class: java.lang.UnknownError$$gzoltarAccess
+	at javassist.compiler.MemberResolver.lookupClass(MemberResolver.java:410)
+	at javassist.compiler.MemberResolver.lookupClassByJvmName(MemberResolver.java:329)
+	at javassist.compiler.TypeChecker.atCallExpr(TypeChecker.java:711)
+	at javassist.compiler.JvstTypeChecker.atCallExpr(JvstTypeChecker.java:170)
+	at javassist.compiler.ast.CallExpr.accept(CallExpr.java:49)
+	at javassist.compiler.CodeGen.doTypeCheck(CodeGen.java:266)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:360)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:53)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:381)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:53)
+	at javassist.compiler.CodeGen.atIfStmnt(CodeGen.java:428)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:385)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:53)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:381)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:53)
+	at javassist.compiler.CodeGen.atMethodBody(CodeGen.java:321)
+	at javassist.compiler.CodeGen.atMethodDecl(CodeGen.java:303)
+	at javassist.compiler.ast.MethodDecl.accept(MethodDecl.java:47)
+	at javassist.compiler.Javac.compileMethod(Javac.java:175)
+	at javassist.compiler.Javac.compile(Javac.java:102)
+	at javassist.CtNewMethod.make(CtNewMethod.java:79)
+	at javassist.CtNewMethod.make(CtNewMethod.java:50)
+	at javassist.CtMethod.make(CtMethod.java:140)
+	at com.gzoltar.core.instr.pass.AbstractInitMethodInstrumentationPass.transform(AbstractInitMethodInstrumentationPass.java:56)
+	at com.gzoltar.core.instr.pass.InstrumentationPass.transform(InstrumentationPass.java:124)
+	at com.gzoltar.core.instr.pass.TestLineInstrumentation.test(TestLineInstrumentation.java:60)
+	at com.gzoltar.core.instr.pass.TestLineInstrumentation.testProbesOfProtectedClass(TestLineInstrumentation.java:182)
+
+testProbesOfEnumClass on testProbesOfEnumClass(com.gzoltar.core.instr.pass.TestLineInstrumentation)(com.gzoltar.core.instr.pass.TestLineInstrumentation)  Time elapsed: 0.009 sec  <<< FAILURE!
+javassist.CannotCompileException: [source error] no such class: java.lang.UnknownError$$gzoltarAccess
+	at javassist.compiler.MemberResolver.lookupClass(MemberResolver.java:410)
+	at javassist.compiler.MemberResolver.lookupClassByJvmName(MemberResolver.java:329)
+	at javassist.compiler.TypeChecker.atCallExpr(TypeChecker.java:711)
+	at javassist.compiler.JvstTypeChecker.atCallExpr(JvstTypeChecker.java:170)
+	at javassist.compiler.ast.CallExpr.accept(CallExpr.java:49)
+	at javassist.compiler.CodeGen.doTypeCheck(CodeGen.java:266)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:360)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:53)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:381)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:53)
+	at javassist.compiler.CodeGen.atIfStmnt(CodeGen.java:428)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:385)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:53)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:381)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:53)
+	at javassist.compiler.CodeGen.atMethodBody(CodeGen.java:321)
+	at javassist.compiler.CodeGen.atMethodDecl(CodeGen.java:303)
+	at javassist.compiler.ast.MethodDecl.accept(MethodDecl.java:47)
+	at javassist.compiler.Javac.compileMethod(Javac.java:175)
+	at javassist.compiler.Javac.compile(Javac.java:102)
+	at javassist.CtNewMethod.make(CtNewMethod.java:79)
+	at javassist.CtNewMethod.make(CtNewMethod.java:50)
+	at javassist.CtMethod.make(CtMethod.java:140)
+	at com.gzoltar.core.instr.pass.AbstractInitMethodInstrumentationPass.transform(AbstractInitMethodInstrumentationPass.java:56)
+	at com.gzoltar.core.instr.pass.InstrumentationPass.transform(InstrumentationPass.java:124)
+	at com.gzoltar.core.instr.pass.TestLineInstrumentation.test(TestLineInstrumentation.java:60)
+	at com.gzoltar.core.instr.pass.TestLineInstrumentation.testProbesOfEnumClass(TestLineInstrumentation.java:90)
+
+testProbesOfPrivateClass on testProbesOfPrivateClass(com.gzoltar.core.instr.pass.TestLineInstrumentation)(com.gzoltar.core.instr.pass.TestLineInstrumentation)  Time elapsed: 0.005 sec  <<< FAILURE!
+javassist.CannotCompileException: [source error] no such class: java.lang.UnknownError$$gzoltarAccess
+	at javassist.compiler.MemberResolver.lookupClass(MemberResolver.java:410)
+	at javassist.compiler.MemberResolver.lookupClassByJvmName(MemberResolver.java:329)
+	at javassist.compiler.TypeChecker.atCallExpr(TypeChecker.java:711)
+	at javassist.compiler.JvstTypeChecker.atCallExpr(JvstTypeChecker.java:170)
+	at javassist.compiler.ast.CallExpr.accept(CallExpr.java:49)
+	at javassist.compiler.CodeGen.doTypeCheck(CodeGen.java:266)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:360)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:53)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:381)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:53)
+	at javassist.compiler.CodeGen.atIfStmnt(CodeGen.java:428)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:385)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:53)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:381)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:53)
+	at javassist.compiler.CodeGen.atMethodBody(CodeGen.java:321)
+	at javassist.compiler.CodeGen.atMethodDecl(CodeGen.java:303)
+	at javassist.compiler.ast.MethodDecl.accept(MethodDecl.java:47)
+	at javassist.compiler.Javac.compileMethod(Javac.java:175)
+	at javassist.compiler.Javac.compile(Javac.java:102)
+	at javassist.CtNewMethod.make(CtNewMethod.java:79)
+	at javassist.CtNewMethod.make(CtNewMethod.java:50)
+	at javassist.CtMethod.make(CtMethod.java:140)
+	at com.gzoltar.core.instr.pass.AbstractInitMethodInstrumentationPass.transform(AbstractInitMethodInstrumentationPass.java:56)
+	at com.gzoltar.core.instr.pass.InstrumentationPass.transform(InstrumentationPass.java:124)
+	at com.gzoltar.core.instr.pass.TestLineInstrumentation.test(TestLineInstrumentation.java:60)
+	at com.gzoltar.core.instr.pass.TestLineInstrumentation.testProbesOfPrivateClass(TestLineInstrumentation.java:167)
+
+testProbesOfPublicClass on testProbesOfPublicClass(com.gzoltar.core.instr.pass.TestLineInstrumentation)(com.gzoltar.core.instr.pass.TestLineInstrumentation)  Time elapsed: 0.005 sec  <<< FAILURE!
+javassist.CannotCompileException: [source error] no such class: java.lang.UnknownError$$gzoltarAccess
+	at javassist.compiler.MemberResolver.lookupClass(MemberResolver.java:410)
+	at javassist.compiler.MemberResolver.lookupClassByJvmName(MemberResolver.java:329)
+	at javassist.compiler.TypeChecker.atCallExpr(TypeChecker.java:711)
+	at javassist.compiler.JvstTypeChecker.atCallExpr(JvstTypeChecker.java:170)
+	at javassist.compiler.ast.CallExpr.accept(CallExpr.java:49)
+	at javassist.compiler.CodeGen.doTypeCheck(CodeGen.java:266)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:360)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:53)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:381)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:53)
+	at javassist.compiler.CodeGen.atIfStmnt(CodeGen.java:428)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:385)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:53)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:381)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:53)
+	at javassist.compiler.CodeGen.atMethodBody(CodeGen.java:321)
+	at javassist.compiler.CodeGen.atMethodDecl(CodeGen.java:303)
+	at javassist.compiler.ast.MethodDecl.accept(MethodDecl.java:47)
+	at javassist.compiler.Javac.compileMethod(Javac.java:175)
+	at javassist.compiler.Javac.compile(Javac.java:102)
+	at javassist.CtNewMethod.make(CtNewMethod.java:79)
+	at javassist.CtNewMethod.make(CtNewMethod.java:50)
+	at javassist.CtMethod.make(CtMethod.java:140)
+	at com.gzoltar.core.instr.pass.AbstractInitMethodInstrumentationPass.transform(AbstractInitMethodInstrumentationPass.java:56)
+	at com.gzoltar.core.instr.pass.InstrumentationPass.transform(InstrumentationPass.java:124)
+	at com.gzoltar.core.instr.pass.TestLineInstrumentation.test(TestLineInstrumentation.java:60)
+	at com.gzoltar.core.instr.pass.TestLineInstrumentation.testProbesOfPublicClass(TestLineInstrumentation.java:197)
+
+testProbesOfInnerClass on testProbesOfInnerClass(com.gzoltar.core.instr.pass.TestLineInstrumentation)(com.gzoltar.core.instr.pass.TestLineInstrumentation)  Time elapsed: 0.005 sec  <<< FAILURE!
+javassist.CannotCompileException: [source error] no such class: java.lang.UnknownError$$gzoltarAccess
+	at javassist.compiler.MemberResolver.lookupClass(MemberResolver.java:410)
+	at javassist.compiler.MemberResolver.lookupClassByJvmName(MemberResolver.java:329)
+	at javassist.compiler.TypeChecker.atCallExpr(TypeChecker.java:711)
+	at javassist.compiler.JvstTypeChecker.atCallExpr(JvstTypeChecker.java:170)
+	at javassist.compiler.ast.CallExpr.accept(CallExpr.java:49)
+	at javassist.compiler.CodeGen.doTypeCheck(CodeGen.java:266)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:360)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:53)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:381)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:53)
+	at javassist.compiler.CodeGen.atIfStmnt(CodeGen.java:428)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:385)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:53)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:381)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:53)
+	at javassist.compiler.CodeGen.atMethodBody(CodeGen.java:321)
+	at javassist.compiler.CodeGen.atMethodDecl(CodeGen.java:303)
+	at javassist.compiler.ast.MethodDecl.accept(MethodDecl.java:47)
+	at javassist.compiler.Javac.compileMethod(Javac.java:175)
+	at javassist.compiler.Javac.compile(Javac.java:102)
+	at javassist.CtNewMethod.make(CtNewMethod.java:79)
+	at javassist.CtNewMethod.make(CtNewMethod.java:50)
+	at javassist.CtMethod.make(CtMethod.java:140)
+	at com.gzoltar.core.instr.pass.AbstractInitMethodInstrumentationPass.transform(AbstractInitMethodInstrumentationPass.java:56)
+	at com.gzoltar.core.instr.pass.InstrumentationPass.transform(InstrumentationPass.java:124)
+	at com.gzoltar.core.instr.pass.TestLineInstrumentation.test(TestLineInstrumentation.java:60)
+	at com.gzoltar.core.instr.pass.TestLineInstrumentation.testProbesOfInnerClass(TestLineInstrumentation.java:152)
+
+testProbesOfPublicFinalClass on testProbesOfPublicFinalClass(com.gzoltar.core.instr.pass.TestLineInstrumentation)(com.gzoltar.core.instr.pass.TestLineInstrumentation)  Time elapsed: 0.005 sec  <<< FAILURE!
+javassist.CannotCompileException: [source error] no such class: java.lang.UnknownError$$gzoltarAccess
+	at javassist.compiler.MemberResolver.lookupClass(MemberResolver.java:410)
+	at javassist.compiler.MemberResolver.lookupClassByJvmName(MemberResolver.java:329)
+	at javassist.compiler.TypeChecker.atCallExpr(TypeChecker.java:711)
+	at javassist.compiler.JvstTypeChecker.atCallExpr(JvstTypeChecker.java:170)
+	at javassist.compiler.ast.CallExpr.accept(CallExpr.java:49)
+	at javassist.compiler.CodeGen.doTypeCheck(CodeGen.java:266)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:360)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:53)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:381)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:53)
+	at javassist.compiler.CodeGen.atIfStmnt(CodeGen.java:428)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:385)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:53)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:381)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:53)
+	at javassist.compiler.CodeGen.atMethodBody(CodeGen.java:321)
+	at javassist.compiler.CodeGen.atMethodDecl(CodeGen.java:303)
+	at javassist.compiler.ast.MethodDecl.accept(MethodDecl.java:47)
+	at javassist.compiler.Javac.compileMethod(Javac.java:175)
+	at javassist.compiler.Javac.compile(Javac.java:102)
+	at javassist.CtNewMethod.make(CtNewMethod.java:79)
+	at javassist.CtNewMethod.make(CtNewMethod.java:50)
+	at javassist.CtMethod.make(CtMethod.java:140)
+	at com.gzoltar.core.instr.pass.AbstractInitMethodInstrumentationPass.transform(AbstractInitMethodInstrumentationPass.java:56)
+	at com.gzoltar.core.instr.pass.InstrumentationPass.transform(InstrumentationPass.java:124)
+	at com.gzoltar.core.instr.pass.TestLineInstrumentation.test(TestLineInstrumentation.java:60)
+	at com.gzoltar.core.instr.pass.TestLineInstrumentation.testProbesOfPublicFinalClass(TestLineInstrumentation.java:212)
+
+testProbesOfDeprecatedClass on testProbesOfDeprecatedClass(com.gzoltar.core.instr.pass.TestLineInstrumentation)(com.gzoltar.core.instr.pass.TestLineInstrumentation)  Time elapsed: 0.007 sec  <<< FAILURE!
+javassist.CannotCompileException: [source error] no such class: java.lang.UnknownError$$gzoltarAccess
+	at javassist.compiler.MemberResolver.lookupClass(MemberResolver.java:410)
+	at javassist.compiler.MemberResolver.lookupClassByJvmName(MemberResolver.java:329)
+	at javassist.compiler.TypeChecker.atCallExpr(TypeChecker.java:711)
+	at javassist.compiler.JvstTypeChecker.atCallExpr(JvstTypeChecker.java:170)
+	at javassist.compiler.ast.CallExpr.accept(CallExpr.java:49)
+	at javassist.compiler.CodeGen.doTypeCheck(CodeGen.java:266)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:360)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:53)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:381)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:53)
+	at javassist.compiler.CodeGen.atIfStmnt(CodeGen.java:428)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:385)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:53)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:381)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:53)
+	at javassist.compiler.CodeGen.atMethodBody(CodeGen.java:321)
+	at javassist.compiler.CodeGen.atMethodDecl(CodeGen.java:303)
+	at javassist.compiler.ast.MethodDecl.accept(MethodDecl.java:47)
+	at javassist.compiler.Javac.compileMethod(Javac.java:175)
+	at javassist.compiler.Javac.compile(Javac.java:102)
+	at javassist.CtNewMethod.make(CtNewMethod.java:79)
+	at javassist.CtNewMethod.make(CtNewMethod.java:50)
+	at javassist.CtMethod.make(CtMethod.java:140)
+	at com.gzoltar.core.instr.pass.AbstractInitMethodInstrumentationPass.transform(AbstractInitMethodInstrumentationPass.java:56)
+	at com.gzoltar.core.instr.pass.InstrumentationPass.transform(InstrumentationPass.java:124)
+	at com.gzoltar.core.instr.pass.TestLineInstrumentation.test(TestLineInstrumentation.java:60)
+	at com.gzoltar.core.instr.pass.TestLineInstrumentation.testProbesOfDeprecatedClass(TestLineInstrumentation.java:247)
+
+test on test(com.gzoltar.core.listeners.TestJUnitListener)(com.gzoltar.core.listeners.TestJUnitListener)  Time elapsed: 0.027 sec  <<< FAILURE!
+javassist.bytecode.DuplicateMemberException: duplicate field: $gzoltarData
+	at javassist.bytecode.ClassFile.testExistingField(ClassFile.java:618)
+	at javassist.bytecode.ClassFile.addField(ClassFile.java:598)
+	at javassist.CtClassType.addField(CtClassType.java:1400)
+	at javassist.CtClass.addField(CtClass.java:1103)
+	at com.gzoltar.core.instr.pass.FieldInstrumentationPass.transform(FieldInstrumentationPass.java:35)
+	at com.gzoltar.core.instr.pass.InstrumentationPass.transform(InstrumentationPass.java:120)
+	at com.gzoltar.core.instr.Instrumenter.instrument(Instrumenter.java:102)
+	at com.gzoltar.core.listeners.TestJUnitListener.test(TestJUnitListener.java:56)
+
+
+Results :
+
+Failed tests: 
+  TestLineInstrumentation.testProbesOfAnonymousClass:130->test:60 » CannotCompile
+  TestLineInstrumentation.testProbesOfPublicStaticClass:227->test:60 » CannotCompile
+  TestLineInstrumentation.testProbesOfAbstractClass:110->test:60 » CannotCompile
+  TestLineInstrumentation.testProbesOfProtectedClass:182->test:60 » CannotCompile
+  TestLineInstrumentation.testProbesOfEnumClass:90->test:60 » CannotCompile [sou...
+  TestLineInstrumentation.testProbesOfPrivateClass:167->test:60 » CannotCompile ...
+  TestLineInstrumentation.testProbesOfPublicClass:197->test:60 » CannotCompile [...
+  TestLineInstrumentation.testProbesOfInnerClass:152->test:60 » CannotCompile [s...
+  TestLineInstrumentation.testProbesOfPublicFinalClass:212->test:60 » CannotCompile
+  TestLineInstrumentation.testProbesOfDeprecatedClass:247->test:60 » CannotCompile
+  TestJUnitListener.test:56 » DuplicateMember duplicate field: $gzoltarData
+
+Tests run: 94, Failures: 11, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] GZoltar ............................................ SUCCESS [  0.390 s]
+[INFO] GZoltar :: Core .................................... FAILURE [  5.224 s]
+[INFO] GZoltar :: FL ...................................... SKIPPED
+[INFO] GZoltar :: Report .................................. SKIPPED
+[INFO] GZoltar :: Agent RT ................................ SKIPPED
+[INFO] GZoltar :: Agent ................................... SKIPPED
+[INFO] GZoltar :: Maven Plugin ............................ SKIPPED
+[INFO] GZoltar :: Ant Plugin .............................. SKIPPED
+[INFO] GZoltar :: Command Line Interface .................. SKIPPED
+[INFO] GZoltar :: Documentation ........................... SKIPPED
+[INFO] GZoltar :: Test .................................... SKIPPED
+[INFO] GZoltar :: Distribution ............................ SKIPPED
+[INFO] root ............................................... SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 5.918 s
+[INFO] Finished at: 2018-12-17T10:39:31+08:00
+[INFO] Final Memory: 23M/252M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.17:test (default-test) on project com.gzoltar.core: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/lizijie/research/new_work/test/gzoltar/com.gzoltar.core/target/surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <goals> -rf :com.gzoltar.core
